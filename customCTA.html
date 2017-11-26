@@ -81,7 +81,7 @@
         <div id="Close">
         </div>
         <div class="View">
-            <img src="https://patricke004.github.io/formEntry/Images/mluvik_konverzace-01.png" alt="" class="CTA-image">
+            <img src="https://patricke004.github.io/customCTA/Images/mluvik_konverzace-01.png" alt="" class="CTA-image">
             <div class="CTA-text">
                 <p id="Message">Chcete se dozvědět více o našem produktu?</p>
             </div>
@@ -105,9 +105,9 @@
         message.innerText = 'Do you want to know more about our product?';
       }
 
-      if(msg.data.params.oo1_ref_url === 'https://www.example.com/index.html') {
+      if(msg.data.params.oo1_ref_url === 'https://patricke004.github.io/customCTA/index.html') {
         // Zde nemusíme provádět nic, necháme původní textaci příp. přeloženou do angličtiny
-      } else if (msg.data.params.oo1_ref_url === 'https://www.example.com/support.html') {
+      } else if (msg.data.params.oo1_ref_url === 'https://patricke004.github.io/customCTA/support.html') {
         message.innerText = 'Naši technici jsou Vám nyní k dispozici!';
       }
 
@@ -116,15 +116,6 @@
       }
     }
   });
-
-  // window.parent.$owidget.addCustomData(
-  //     'navod_clientId', 'as65d1as6d5s1a6d5-sa1d56a'
-  // );
-  // window.parent.postMessage({
-  //   type: 'ADD_CUSTOM_DATA',
-  //   name: 'navod_clientId',
-  //   value: 'das65da1ssad165-as6d51'
-  // }, '*');
 
   window.parent.postMessage({type:"GET_MLUVII_CUSTOM_PARAMS"},"*");
 </script>

@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <a href="page2.html">Link to Page 2</a>
+    <h1>Technická podpora</h1>
 
     <script type="text/javascript">
       (function () {
@@ -24,18 +24,15 @@
 
     <script>
       window.addEventListener('load', function() {
-        setTimeout(function() {
-          console.log('about to add custom data');
-          $owidget.addCustomData(
-            'navod_clientName', 'Jan Novak'
-          );
-          // postMessage({
-          //   type: 'ADD_CUSTOM_DATA',
-          //   name: 'navod_clientName',
-          //   value: 'Jan Novák'
-          // }, '*');
-          postMessage({type:"GET_MLUVII_CUSTOM_PARAMS"},"*");
-        }, 5000);
+          const loginButton = document.getElementById('Login');
+
+          loginButton.addEventListener('click', function() {
+            // zde by měla být logika autentizace uživatele, jakmile se tak stane, zavoláme funkci:
+            $owidget.addCustomData(
+              'navod_clientName', 'Jan Novak'
+            );
+            postMessage({type:"GET_MLUVII_CUSTOM_PARAMS"},"*");
+          });
         
       });
     </script>
